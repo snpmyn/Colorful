@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Colorful</string>
+    <string name="dialog">对话框</string>
+    <string name="change">变更</string>
+    <string name="close">关闭</string>
 </resources>

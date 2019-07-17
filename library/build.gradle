@@ -1,16 +1,19 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 29
+
+
     defaultConfig {
-        vectorDrawables.useSupportLibrary = true/*Vector Drawable兼容*/
-        applicationId "com.zsp.colorful"
         minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -21,16 +24,18 @@ android {
         sourceCompatibility 1.8
         targetCompatibility 1.8
     }
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     /*自带*/
-    implementation 'com.jakewharton:butterknife:10.1.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
-    /*ButterKnife*/
-    implementation project(path: ':library')
-    /*library*/
+    implementation 'androidx.preference:preference:1.0.0'
+    /*官方*/
+    api 'com.github.snpmyn:Util:master-SNAPSHOT'
+    /*util*/
 }
