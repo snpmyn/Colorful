@@ -20,10 +20,10 @@ public class ColorPickerPreference extends Preference implements ColorPickerDial
     public ColorPickerPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setWidgetLayoutResource(R.layout.color_picker_preference);
-        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ColorPicker);
+        TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.ColorPickerPreference);
         try {
-            primary = ta.getBoolean(R.styleable.ColorPicker_primary_color, false);
-            accent = ta.getBoolean(R.styleable.ColorPicker_accent_color, false);
+            primary = ta.getBoolean(R.styleable.ColorPickerPreference_primary_color, false);
+            accent = ta.getBoolean(R.styleable.ColorPickerPreference_accent_color, false);
         } finally {
             ta.recycle();
         }
