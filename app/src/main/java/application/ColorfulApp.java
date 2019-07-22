@@ -2,6 +2,7 @@ package application;
 
 import android.app.Application;
 
+import com.squareup.leakcanary.LeakCanary;
 import com.zsp.colorful.library.Colorful;
 
 /**
@@ -14,6 +15,12 @@ public class ColorfulApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return;
+        }
+        LeakCanary.install(this);
         Colorful.defaults()
                 .primaryColor(Colorful.ThemeColor.RED)
                 .accentColor(Colorful.ThemeColor.BLUE)

@@ -33,4 +33,7 @@ dependencies {
     /*ButterKnife*/
     implementation project(path: ':library')
     /*library*/
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+    /*LeakCanary*/
 }

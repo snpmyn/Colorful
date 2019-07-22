@@ -1,5 +1,6 @@
 package com.zsp.colorful;
 
+import android.Manifest;
 import android.os.Bundle;
 import android.view.View;
 
@@ -7,6 +8,8 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.zsp.colorful.library.BaseColorfulActivity;
 import com.zsp.colorful.library.ColorPickerDialog;
 import com.zsp.colorful.library.Colorful;
+import com.zsp.utilone.permission.SoulPermissionUtils;
+import com.zsp.utilone.toast.ToastUtils;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -17,6 +20,8 @@ import butterknife.OnClick;
  * @date: 2019/7/17 11:40
  */
 public class MainActivity extends BaseColorfulActivity {
+    private SoulPermissionUtils soulPermissionUtils;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +29,32 @@ public class MainActivity extends BaseColorfulActivity {
         /*Colorful.applyTheme(this);*/
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        initConfiguration();
+        execute();
+    }
+
+    private void initConfiguration() {
+        soulPermissionUtils = new SoulPermissionUtils();
+    }
+
+    private void execute() {
+        soulPermissionUtils.checkAndRequestPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE, soulPermissionUtils,
+                true, new SoulPermissionUtils.CheckAndRequestPermissionCallBack() {
+                    @Override
+                    public void onPermissionOk() {
+
+                    }
+
+                    @Override
+                    public void onPermissionDeniedNotRationaleInMiUi(String s) {
+                        ToastUtils.shortShow(MainActivity.this, s);
+                    }
+
+                    @Override
+                    public void onPermissionDeniedNotRationaleWithoutLoopHint(String s) {
+
+                    }
+                });
     }
 
     @OnClick({R.id.mainActivityMbDialog, R.id.mainActivityMbChange})
