@@ -46,7 +46,7 @@ public class ColorPickerDialog extends AppCompatDialog implements View.OnClickLi
             materialToolbar.setNavigationOnClickListener(this);
             materialToolbar.setBackgroundColor(ContextCompat.getColor(getContext(), Colorful.getThemeDelegate().getPrimaryColor().getColorRes()));
             materialToolbar.setTitle(R.string.selectColor);
-            materialToolbar.setNavigationIcon(R.drawable.ic_arrow_back);
+            materialToolbar.setNavigationIcon(R.drawable.ic_arrow_back_24dp_background);
         }
         if (recyclerView != null) {
             recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 4));
