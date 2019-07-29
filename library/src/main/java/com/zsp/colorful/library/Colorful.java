@@ -2,11 +2,12 @@ package com.zsp.colorful.library;
 
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
 
 import androidx.annotation.ColorRes;
 import androidx.annotation.NonNull;
 import androidx.preference.PreferenceManager;
+
+import timber.log.Timber;
 
 /**
  * @decs: Colorful
@@ -14,7 +15,6 @@ import androidx.preference.PreferenceManager;
  * @date: 2019/7/17 12:01
  */
 public class Colorful {
-    private static final String TAG = "Colorful";
     private static final String PREFERENCE_KEY = "COLORFUL_PREFERENCE_KEY";
     private static ThemeDelegate delegate;
     private static ThemeColor primaryColor = Defaults.primaryColor;
@@ -28,7 +28,7 @@ public class Colorful {
     }
 
     public static void init(Context context) {
-        Log.d(TAG, "Attatching to " + context.getPackageName());
+        Timber.d("Attatching to %s", context.getPackageName());
         themeString = PreferenceManager.getDefaultSharedPreferences(context).getString(PREFERENCE_KEY, null);
         if (themeString == null) {
             primaryColor = Defaults.primaryColor;
@@ -72,7 +72,7 @@ public class Colorful {
 
     static ThemeDelegate getThemeDelegate() {
         if (delegate == null) {
-            Log.e(TAG, "getThemeDelegate() called before init(Context). Call Colorful.init(Context) in your application class");
+            Timber.d("getThemeDelegate() called before init(Context). Call Colorful.init(Context) in your application class");
         }
         return delegate;
     }

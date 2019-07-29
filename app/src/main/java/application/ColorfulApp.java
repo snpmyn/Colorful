@@ -3,7 +3,9 @@ package application;
 import android.app.Application;
 
 import com.squareup.leakcanary.LeakCanary;
+import com.zsp.colorful.BuildConfig;
 import com.zsp.colorful.library.Colorful;
+import com.zsp.utilone.timber.configure.TimberInitConfigure;
 
 /**
  * Created on 2019/7/17.
@@ -21,6 +23,7 @@ public class ColorfulApp extends Application {
             return;
         }
         LeakCanary.install(this);
+        TimberInitConfigure.initTimber(BuildConfig.DEBUG);
         Colorful.defaults()
                 .primaryColor(Colorful.ThemeColor.RED)
                 .accentColor(Colorful.ThemeColor.BLUE)
