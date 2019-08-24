@@ -6,6 +6,7 @@
 ##### AndroidLibrary - Library
 * implementation 'androidx.preference:preference:1.0.0'
 * api 'com.github.snpmyn:*Util*:master-SNAPSHOT'（避重）
+
 #### com.github.snpmyn:Util(api)
 ##### AndroidLibrary - UtilOne
 * api 'com.github.bumptech.glide:glide:4.9.0'（避重）
