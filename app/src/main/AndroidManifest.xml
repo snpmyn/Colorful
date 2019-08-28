@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.zsp.colorful">
 
+    <dist:module dist:instant="true" />
+
     <application
         android:name="application.ColorfulApp"
         android:allowBackup="false"
@@ -21,7 +23,5 @@
             </intent-filter>
         </activity>
     </application>
-
-    <dist:module dist:instant="true" />
 
 </manifest>
