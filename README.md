@@ -10,15 +10,16 @@
 
 ### 架构
 
-| 模块 | 说明 |
-|:-:|:-:|
-| 示例app | 用法举例 |
-| 一方库Library | 功能实现 |
+| 模块 | 说明 | 补充 |
+|:-:|:-:|:-:|
+| 示例app | 用法举例 | 无 |
+| 一方库Library | 功能实现 | 无 |
 
 ### 依赖、权限
 
 | 模块 | 依赖 |
 |:-:|:-:|
+| 示例app | implementation project(path: ':library') |
 | 一方库Library | implementation 'androidx.preference:preference:1.1.0' |
 | 一方库Library | api 'com.github.snpmyn:*Util*:master-SNAPSHOT'（避重）|
 | 二方库Util-UtilOne | api 'com.github.bumptech.glide:glide:4.10.0'（避重）|
@@ -35,8 +36,11 @@
 
 | 模块 | 权限 |
 |:-:|:-:|
+| 示例app | 无 |
 | 二方库Util-app | android:name="android.permission.WRITE_EXTERNAL_STORAGE"（避重）|
 | 二方库Util-app | android:name="android.permission.READ_EXTERNAL_STORAGE"（避重）|
+| 一方库UtilOne | 无 |
+| 一方库UtilTwo | 无 |
 
 ### 使用
 build.gradle(module)
