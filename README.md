@@ -1,7 +1,7 @@
 <div align=center><img src="https://github.com/snpmyn/Colorful/raw/master/image.png"/></div>
 
 [![SNAPSHOT](https://jitpack.io/v/Jaouan/Revealator.svg)](https://jitpack.io/#snpmyn/Colorful)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a1c9a1b1d1ce4ca7a201ab93492bf6e0)](https://app.codacy.com/project/snpmyn/Colorful/dashboard)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/330e779e84d044f7bf374944683fc390)](https://www.codacy.com/manual/snpmyn/Colorful?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=snpmyn/Colorful&amp;utm_campaign=Badge_Grade)
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)
 
@@ -41,8 +41,8 @@
 | 示例app | 无 |
 | 二方库Util-app | android:name="android.permission.WRITE_EXTERNAL_STORAGE"（避重）|
 | 二方库Util-app | android:name="android.permission.READ_EXTERNAL_STORAGE"（避重）|
-| 一方库UtilOne | 无 |
-| 一方库UtilTwo | 无 |
+| 二方库UtilOne | 无 |
+| 二方库UtilTwo | 无 |
 
 ### 使用
 build.gradle(module)
@@ -67,7 +67,7 @@ allprojects {
     repositories {
         google()
         jcenter()
-
+        maven { url "https://jitpack.io" }
     }
 }
 
