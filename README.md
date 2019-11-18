@@ -21,7 +21,7 @@
 |:-:|:-:|
 | 示例app | implementation project(path: ':library') |
 | 一方库Library | implementation 'androidx.preference:preference:1.1.0' |
-| 一方库Library | api 'com.github.snpmyn:*Util*:master-SNAPSHOT'（避重）|
+| 一方库Library | api 'com.github.snpmyn.Util:*utilone*:master-SNAPSHOT'（避重）|
 | 二方库Util-示例app | implementation project(path: ':utilone') |
 | 二方库Util-示例app | implementation project(path: ':utiltwo') |
 | 二方库Util-UtilOne | api 'com.github.bumptech.glide:glide:4.10.0'（避重）|
@@ -46,7 +46,7 @@
 
 ### 使用
 > 版本快速迭代中，暂时使用`master-SNAPSHOT`版。<br>
-> 如获取不成功，请暂时查看源码。
+> 获取不成功请暂时查看源码。
 
 build.gradle(module)
 ```
