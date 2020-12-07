@@ -175,9 +175,9 @@ public class Colorful {
          */
         BLACK(R.color.md_black_1000, R.color.md_black_1000);
         @ColorRes
-        private int colorRes;
+        private final int colorRes;
         @ColorRes
-        private int darkColorRes;
+        private final int darkColorRes;
 
         ThemeColor(@ColorRes int colorRes, @ColorRes int darkColorRes) {
             this.colorRes = colorRes;
@@ -235,7 +235,7 @@ public class Colorful {
     }
 
     public static class Config {
-        private Context context;
+        private final Context context;
 
         private Config(Context context) {
             this.context = context;

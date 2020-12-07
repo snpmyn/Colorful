@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
  * @date: 2019/7/17 15:26
  */
 class ColorPickerAdapter extends RecyclerView.Adapter<ColorPickerAdapter.ItemViewHolder> {
-    private Context context;
+    private final Context context;
     private OnItemClickListener onItemClickListener;
 
     ColorPickerAdapter(Context context) {

@@ -1,6 +1,7 @@
 package com.zsp.colorful;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 
@@ -57,6 +58,7 @@ public class MainActivity extends BaseColorfulActivity {
                 });
     }
 
+    @SuppressLint("NonConstantResourceId")
     @OnClick({R.id.mainActivityMbDialog, R.id.mainActivityMbChange})
     public void onViewClicked(View view) {
         switch (view.getId()) {

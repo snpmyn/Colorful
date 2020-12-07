@@ -14,8 +14,8 @@ import androidx.preference.PreferenceViewHolder;
  * @date: 2019/7/17 15:07
  */
 public class ColorPickerPreference extends Preference implements ColorPickerDialog.OnColorSelectedListener {
-    private boolean primary;
-    private boolean accent;
+    private final boolean primary;
+    private final boolean accent;
 
     public ColorPickerPreference(Context context, AttributeSet attrs) {
         super(context, attrs);

@@ -13,18 +13,16 @@
 安卓运行时主题。
 
 ### 架构
-
 | 模块 | 说明 | 补充 |
 |:-:|:-:|:-:|
 | 示例app | 用法举例 | 无 |
 | 一方库Library | 功能实现 | 无 |
 
 ### 依赖、权限
-
 | 模块 | 依赖 |
 |:-:|:-:|
 | 示例app | implementation project(path: ':library') |
-| 一方库Library | implementation 'androidx.preference:preference:1.1.0' |
+| 一方库Library | implementation 'androidx.preference:preference:1.1.1' |
 | 一方库Library | api 'com.github.snpmyn.Util:*utilone*:v1.0.1'（避重）|
 | 二方库Util-示例app | implementation project(path: ':utilone') |
 | 二方库Util-示例app | implementation project(path: ':utiltwo') |

@@ -12,16 +12,16 @@ import timber.log.Timber;
  * @date: 2019/7/17 15:07
  */
 public class ThemeDelegate {
-    private Colorful.ThemeColor primaryColor;
-    private Colorful.ThemeColor accentColor;
-    private boolean translucent;
-    private boolean dark;
+    private final Colorful.ThemeColor primaryColor;
+    private final Colorful.ThemeColor accentColor;
+    private final boolean translucent;
+    private final boolean dark;
     @StyleRes
-    private int styleResPrimary;
+    private final int styleResPrimary;
     @StyleRes
-    private int styleResAccent;
+    private final int styleResAccent;
     @StyleRes
-    private int styleResBase;
+    private final int styleResBase;
 
     ThemeDelegate(Context context, Colorful.ThemeColor primary, Colorful.ThemeColor accent, boolean translucent, boolean dark) {
         this.primaryColor = primary;
